@@ -45,4 +45,19 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    &.primary {
+        border: 1px solid $white;
+        color: $white;
+        padding: 10px 15px;
+        background-color: $primary;
+    }
+    &.secondary {
+        padding: 10px 35px;
+        background-color: $white;
+        color: $gray2;
+    }
 }
