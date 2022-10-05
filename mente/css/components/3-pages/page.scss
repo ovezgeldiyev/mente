@@ -1,0 +1,117 @@
+.testimonials {
+  background-color: #818388;
+  &__inner {
+    padding: 66px 0 105px;
+    h3 {
+      color: $white;
+      text-align: center;
+      padding-bottom: 17px;
+      position: relative;
+      margin-bottom: 40px;
+      &:after {
+        content: "";
+        width: 75%;
+        height: 1px;
+        max-width: 840px;
+        background-color: $white;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &-main {
+      max-width: 1034px;
+      margin: 0 auto;
+      padding-bottom: 60px;
+      .testimonialsItem {
+        &__image {
+          width: 80%;
+          max-width: 103px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 33px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+        p {
+          font-size: 19px;
+          line-height: 37px;
+          font-weight: 400;
+          color: $white;
+          text-align: center;
+          letter-spacing: 1px;
+          strong {
+            font-weight: 700;
+          }
+        }
+      }
+      .slick {
+        &-active {
+          button {
+            &::before {
+              opacity: 1;
+            }
+          }
+        }
+        &-dots {
+          bottom: 0;
+          li {
+            width: 9px;
+            height: 9px;
+            button {
+              width: 9px;
+              height: 9px;
+              background-color: transparent;
+              border: 1px solid $white;
+              border-radius: 50%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: $white;
+                border-radius: 50%;
+                opacity: 0;
+              }
+            }
+            &.active {
+              background-color: $white;
+            }
+          }
+        }
+        &-arrow {
+          top: 54%;
+        }
+        &-next {
+          border: solid $white;
+          border-width: 0 5px 5px 0;
+          display: inline-block;
+          padding: 3px;
+          transform: rotate(-45deg);
+          right: -8%;
+          &::before {
+            display: none;
+          }
+        }
+        &-prev {
+          border: solid $white;
+          border-width: 5px 0 0 5px;
+          display: inline-block;
+          padding: 3px;
+          transform: rotate(-45deg);
+          left: -8%;
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

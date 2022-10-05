@@ -168,3 +168,17 @@ function onTabClick(tabBtns, tabItems, item) {
   });
 }
 // faq end
+
+
+
+
+$(function () {
+  $(".testimonials__inner-main").slick({
+    dots: true,
+    infinite: true,
+    centerMode: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  });
+});
