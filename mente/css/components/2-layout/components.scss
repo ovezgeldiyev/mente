@@ -10,11 +10,7 @@ h2 {
     font-size: 70px;
     line-height: 77px;
     &.sm {
-        font-size: 48px;
-        line-height: 56px;
-    }
-    &.ex {
-        font-size: 45px;
+        font-size: 46px;
         line-height: 56px;
     }
 }
@@ -48,7 +44,7 @@ p {
 }
 main {
     overflow: hidden;
-    padding: 200px 0;
+    // padding: 200px 0;
 }
 .button {
     display: flex;
@@ -77,5 +73,6 @@ main {
         padding: 10px 35px;
         background-color: $white;
         color: $gray2;
+        border: 1px solid transparent;
     }
 }
