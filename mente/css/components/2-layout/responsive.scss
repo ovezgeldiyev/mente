@@ -7,7 +7,6 @@
 }
 // 1450px
 @include xxxxlg-xxxxxlg {
-    // @include hero-xxxxlg-xxxxxlg;
      @include inventory-xxxxlg-xxxxxlg;
 
 }
@@ -206,7 +205,9 @@
         font-size: 15px;
         &__row {
             .button {
-                margin-right: 5px;
+                &:first-child {
+                    margin-right: 5px;
+                }
             }
         }
         &.primary {
