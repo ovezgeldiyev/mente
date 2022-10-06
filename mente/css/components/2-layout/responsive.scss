@@ -47,6 +47,8 @@
 }
 // 1180px
 @include xlg-xxlg {
+    @include nav-xlg-xxlg;
+
     @include hero-xlg-xxlg;
     @include inventory-xlg-xxlg;
     @include intro-xlg-xxlg;
@@ -63,6 +65,9 @@
     }
     .auto__container {
         padding: 0 30px;
+    }
+    main {
+        margin-top: 130px;
     }
     h1 {
         font-size: 50px;
@@ -88,6 +93,9 @@
         font-size: 18px;
         line-height: 30px;
     }
+    @include nav-lg-xlg;
+    @include header-lg-xlg;
+
     @include hero-lg-xlg;
     @include testimonials-lg-xlg;
     @include inventory-lg-xlg;
@@ -121,7 +129,7 @@
 // 767px
 @include sm-md-l {
     main {
-        margin-top: 129px;
+        // margin-top: 129px;
     }
 }
 // 750px
@@ -175,6 +183,11 @@
 }
 // 540px
 @include xsm-sm  {
+    main {
+        margin-top: 110px;
+    }
+    @include header-xsm-sm;
+
     @include hero-xsm-sm;
     @include testimonials-xsm-sm;
     @include inventory-xsm-sm;

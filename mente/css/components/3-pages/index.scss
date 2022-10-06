@@ -15,7 +15,7 @@
             align-items: stretch !important;
         }
         &-arrow {
-            z-index: 99;
+            z-index: 9;
             background-color: $white;
             width: 70px;
             height: 70px;
@@ -271,6 +271,9 @@
                 display: flex;
                 justify-content: center;
                 .button {
+                    &.primary {
+                        background-color: transparent;
+                    }
                     &:first-child {
                         margin-right: 10px;
                     }
@@ -2530,16 +2533,3 @@
     }
   }
   
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 25%, 0);
-      transform: translate3d(0, 25%, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-  }

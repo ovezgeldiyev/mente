@@ -13,15 +13,40 @@
    animation-duration: .4s;
   }
   &__inner {
-    padding: 30px 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    &-top {
+      padding: 35px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .button {
+        border: 1px solid $white;
+        background-color: transparent;
+      }
+    }
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button {
+        background-color: transparent;
+        cursor: pointer;
+        width: 22px;
+        height: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 100%;
+        }
+      }
+    }
     &-logo {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 320px;
+      width: 210px;
       img {
         width: 100%;
       }
@@ -31,13 +56,37 @@
 // 1024px
 @mixin header-lg-xlg {
     .header {
-    
+      &__inner {
+        &-logo {
+          width: 150px;
+        }
+        &-top {
+          padding: 20px 0;
+          .button {
+            font-size: 15px;
+            line-height: 18px;
+   
+          }
+        }
+      }
     }
 }
 // 540px
 @mixin header-xsm-sm {
     .header {
-    
+      &__inner {
+        &-logo {
+          width: 120px;
+        }
+        &-top {
+          padding: 15px 0;
+          .button {
+            font-size: 12px;
+            line-height: 15px;
+            padding: 6px 12px;
+          }
+        }
+      }
     }
 }
 @keyframes sticky {
