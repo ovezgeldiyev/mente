@@ -176,6 +176,7 @@ main {
   font-weight: 700;
   border: 1px solid #09225A;
   padding: 8px 15px;
+  background-color: transparent;
 }
 
 button {
@@ -959,6 +960,7 @@ button {
   border: 1px solid #09225A;
   padding: 8px 15px;
   margin: 0 21px 0 0;
+  background-color: transparent;
 }
 .inventory__inner-main > .button {
   display: none;
@@ -1813,14 +1815,20 @@ button {
     line-height: 32px;
     margin-bottom: 0;
     width: 100%;
-    padding: 30px 20px;
+    padding: 40px 20px;
   }
   .inventory__inner-main .inventoryItem {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+  }
+  .inventory__inner-main .inventoryItem:last-child {
+    margin-bottom: 20px;
+  }
+  .inventory__inner-main .inventoryItem__wrapper .inventoryItem {
+    margin-top: 30px;
   }
   .inventory__inner-main .inventoryItem__icons {
     margin-bottom: 30px;
@@ -1844,9 +1852,6 @@ button {
   .inventory__inner-main .inventoryItem__icons strong {
     font-size: 25px;
     line-height: 25px;
-  }
-  .inventory__inner-main .inventoryItem:last-child {
-    margin-bottom: 50px;
   }
   .inventory__inner-main .inventoryItem__wrapper {
     display: none;
@@ -2281,7 +2286,7 @@ button {
     display: none;
   }
   .testimonials__inner-slider .testimonialsItem p.tabEvent {
-    max-height: 340px;
+    max-height: 366px;
     overflow: hidden;
   }
   .testimonials__inner-slider .testimonialsItem p.tabEvent.active {
@@ -2303,6 +2308,9 @@ button {
     left: 0;
     -webkit-transform: unset;
             transform: unset;
+  }
+  .testimonials__bg img {
+    display: none;
   }
 
   .inventory__inner-main .inventoryItem__icons {
@@ -2452,7 +2460,6 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 50px;
   }
   .inventory__inner-main .inventoryItem__image {
     margin: 0 0 25px;
@@ -2487,7 +2494,7 @@ button {
   }
   .inventory__inner-main .inventoryItem__icons strong {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 26px;
   }
   .inventory__inner-main .inventoryItem__content {
     padding: 0 20px;
