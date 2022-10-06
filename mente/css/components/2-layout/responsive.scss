@@ -1,3 +1,9 @@
+// 1550px
+@include xxxxxlg-xxxxxxlg {
+    @include intro-xxxxxlg-xxxxxxlg;
+    @include hero-xxxxxlg-xxxxxxlg;
+
+}
 // 1450px
 @include xxxxlg-xxxxxlg {
     // @include hero-xxxxlg-xxxxxlg;
@@ -30,6 +36,7 @@
     @include testimonials-xxxlg-xxxxlg;
     @include inventory-xxxlg-xxxxlg;
 
+    @include intro-xxxlg-xxxxlg;
 
 }
 // 1250px
@@ -42,6 +49,8 @@
 @include xlg-xxlg {
     @include hero-xlg-xxlg;
     @include inventory-xlg-xxlg;
+    @include intro-xlg-xxlg;
+    @include about-xlg-xxlg;
 
 }
 // 1024px
@@ -80,6 +89,9 @@
     @include testimonials-lg-xlg;
     @include inventory-lg-xlg;
 
+    @include intro-lg-xlg;
+    @include about-lg-xlg;
+    @include info-lg-xlg;
 
 }
 // 930px
@@ -92,6 +104,9 @@
 @include  md-lg-extra{
     @include testimonials-md-lg-extra;
     @include inventory-md-lg-extra;
+    @include intro-md-lg;
+    @include about-md-lg;
+    @include info-md-lg;
 
 }
 // 750px
@@ -125,12 +140,18 @@
     }
     @include hero-sm-md;
     @include inventory-sm-md;
+    @include intro-sm-md;
+    @include about-sm-md;
+    @include info-sm-md;
 
 }
 // 650px
 @include sm-md-extra {
     @include hero-sm-md-extra;
     @include testimonials-sm-md-extra;
+    @include intro-sm-md-extra;
+    @include about-sm-md-extra;
+    @include info-sm-md-extra;
 
 }
 // 540px
@@ -155,9 +176,11 @@
         }
     }
     @include hero-xxsm-xsm;
+    @include intro-xxsm-xsm;
+    @include about-xxsm-xsm;
 
 }
-// 390px
+// 370px
 @include xxxsm-xxsm  {
     // @include hero-xxxsm-xxsm;
      @include testimonials-xxxsm-xxsm;
@@ -170,5 +193,20 @@
 // 320px
 @include sm{
     @include inventory-sm;
+    .button {
+        font-size: 15px;
+        &__row {
+            .button {
+                margin-right: 5px;
+            }
+        }
+        &.primary {
+            padding: 6px 12px;
+        }
+        &.secondary {
+            padding: 6px 25px;
+        }
+    }
+    @include about-xxxsm-xxsm;
 }
 

@@ -59,6 +59,16 @@ main {
     line-height: 26px;
     font-weight: 700;
     text-transform: uppercase;
+    cursor: pointer;
+    &__row {
+        display: flex;
+        align-items: center;
+        .button {
+            &:first-child {
+                margin-right: 24px;
+            }
+        }
+    }
     &.primary {
       border: 1px solid $white;
       color: $white;

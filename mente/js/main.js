@@ -159,6 +159,43 @@ function onTabClick(tabBtns, tabItems, item) {
         item.classList.remove("active");
       });
 
+
+
+$(function () {
+  $(".hero__slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    speed: 1200,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  });
+});
+// faq start
+const tabBtn = document.querySelectorAll(".tabBtn");
+const tabEvent = document.querySelectorAll(".tabEvent");
+tabBtn.forEach((e) => {
+  onTabClick(tabBtn, tabEvent, e);
+});
+function onTabClick(tabBtns, tabItems, item) {
+  item.addEventListener("click", function (e) {
+    let currentBtn = item;
+    let tabId = currentBtn.getAttribute("data-tab");
+    let currentTab = document.querySelector(tabId);
+    if (currentBtn.classList.contains("active")) {
+      console.log("now active");
+      const faq = currentBtn.parentElement.querySelector(".tabEvent");
+      if (faq) {
+        faq.classList.remove("active");
+        currentBtn.classList.remove("active");
+      }
+    } else if (!currentBtn.classList.contains("active")) {
+      tabBtns.forEach(function (item) {
+        item.classList.remove("active");
+      });
+
       tabItems.forEach(function (item) {
         item.classList.remove("active");
       });
@@ -182,3 +219,4 @@ function onTabClick(tabBtns, tabItems, item) {
     slidesToScroll: 1,
   });
 });
+// faq end
