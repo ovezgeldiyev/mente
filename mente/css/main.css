@@ -146,6 +146,7 @@ main {
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .button__row {
   display: -webkit-box;
@@ -154,34 +155,9 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 700;
-  text-transform: uppercase;
-  cursor: pointer;
 }
-.button__row__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.button__row__row .button:first-child {
+.button__row .button:first-child {
   margin-right: 24px;
-}
-.button__row.primary {
-  border: 1px solid #fff;
-  color: #fff;
-  padding: 10px 15px;
-  background-color: #07205C;
-}
-.button__row.secondary {
-  padding: 10px 35px;
-  background-color: #fff;
-  color: #545962;
-  border: 1px solid transparent;
 }
 .button.primary {
   border: 1px solid #fff;
@@ -193,6 +169,13 @@ main {
   padding: 10px 35px;
   background-color: #fff;
   color: #545962;
+  border: 1px solid transparent;
+}
+.button.more {
+  color: #09225A;
+  font-weight: 700;
+  border: 1px solid #09225A;
+  padding: 8px 15px;
 }
 
 button {
@@ -899,19 +882,9 @@ button {
   padding: 8px 15px;
   margin: 0 21px 0 0;
 }
-.inventory__inner-main .button__wrapper {
-  padding: 0 24px;
-}
-.inventory__inner-main .button__wrapper .more {
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
-  color: #09225A;
-  font-weight: 700;
-  border: 1px solid #09225A;
-  padding: 8px 15px;
+.inventory__inner-main > .button {
   display: none;
-  font-weight: 700;
+  margin: 0 20px;
 }
 
 .testimonials {
@@ -1590,6 +1563,7 @@ button {
   .inventory__inner-main .inventoryItem__content-row {
     margin-bottom: 20px;
   }
+
   .intro__bottom {
     padding: 24px 30px;
   }
@@ -1783,7 +1757,7 @@ button {
     line-height: 26px;
     padding: 8px 27px;
   }
-  .inventory__inner-main .button__wrapper .more {
+  .inventory__inner-main > .button {
     display: block;
     max-width: 331px;
     width: 100%;
@@ -2070,7 +2044,7 @@ button {
     transition: 0.6s ease;
   }
   .info__inner-col.active {
-    max-height: 1400px;
+    max-height: 2000px;
   }
   .info__inner h2 {
     margin-bottom: 40px;
