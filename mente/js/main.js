@@ -65,13 +65,11 @@ $(function () {
     focusOnSelect: true,
     arrows: false,
     speed: 500,
-    asNavFor: '.about__inner-slider',
+    asNavFor: ".about__inner-slider",
     responsive: [
       {
         breakpoint: 930,
-        settings: {
-         
-        },
+        settings: {},
       },
     ],
   });
@@ -87,7 +85,7 @@ $(function () {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    asNavFor: '.about__inner-swiper',
+    asNavFor: ".about__inner-swiper",
   });
 });
 
@@ -169,9 +167,6 @@ function onTabClick(tabBtns, tabItems, item) {
 }
 // faq end
 
-
-
-
 $(function () {
   $(".testimonials__inner-main").slick({
     dots: true,
@@ -182,3 +177,4 @@ $(function () {
     slidesToScroll: 1,
   });
 });
+

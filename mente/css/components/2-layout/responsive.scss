@@ -5,6 +5,8 @@
 // 1380px
 @include xxxlg-xxxxlg {
     @include hero-xxxlg-xxxxlg;
+    @include testimonials-xxxlg-xxxxlg;
+
 }
 // 1250px
 @include xlg-xxlg-extra {
@@ -20,22 +22,34 @@
         display: none;
     }
     @include hero-lg-xlg;
+    @include testimonials-lg-xlg;
+
 }
 // 930px
 @include md-lg {
     @include hero-md-lg;
 }
+// 840px
+@include  md-lg-extra{
+    @include testimonials-md-lg-extra;
+}
 // 750px
 @include sm-md {
     @include hero-sm-md;
+    @include testimonials-sm-md;
+
 }
 // 650px
 @include sm-md-extra {
     @include hero-sm-md-extra;
+    @include testimonials-sm-md-extra;
+
 }
 // 540px
 @include xsm-sm  {
     @include hero-xsm-sm;
+    @include testimonials-xsm-sm;
+
 }
 // 440px
 @include xxsm-xsm  {
