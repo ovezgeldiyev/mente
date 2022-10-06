@@ -6,9 +6,17 @@ h1 {
 }
 
 h2 {
-  font-weight: 400;
-  font-size: 70px;
-  line-height: 77px;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 77px;
+    &.sm {
+        font-size: 48px;
+        line-height: 56px;
+    }
+    &.ex {
+        font-size: 45px;
+        line-height: 56px;
+    }
 }
 
 h3 {
@@ -39,25 +47,35 @@ p {
  
 }
 main {
-  overflow: hidden;
+    overflow: hidden;
+    padding: 200px 0;
 }
 .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 700;
-  text-transform: uppercase;
-  &.primary {
-    border: 1px solid $white;
-    color: $white;
-    padding: 10px 15px;
-    background-color: $primary;
-  }
-  &.secondary {
-    padding: 10px 35px;
-    background-color: $white;
-    color: $gray2;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    &__row {
+        display: flex;
+        align-items: center;
+        .button {
+            &:first-child {
+                margin-right: 24px;
+            }
+        }
+    }
+    &.primary {
+        border: 1px solid $white;
+        color: $white;
+        padding: 10px 15px;
+        background-color: $primary;
+    }
+    &.secondary {
+        padding: 10px 35px;
+        background-color: $white;
+        color: $gray2;
+    }
 }

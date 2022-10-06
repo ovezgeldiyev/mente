@@ -81,7 +81,7 @@ ul li {
 
 .auto__container {
   position: relative;
-  max-width: 1250px;
+  max-width: 1580px;
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -97,6 +97,14 @@ h2 {
   font-weight: 400;
   font-size: 70px;
   line-height: 77px;
+}
+h2.sm {
+  font-size: 48px;
+  line-height: 56px;
+}
+h2.ex {
+  font-size: 45px;
+  line-height: 56px;
 }
 
 h3 {
@@ -126,6 +134,7 @@ h6 {
 
 main {
   overflow: hidden;
+  padding: 200px 0;
 }
 
 .button {
@@ -142,6 +151,17 @@ main {
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
+}
+.button__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.button__row .button:first-child {
+  margin-right: 24px;
 }
 .button.primary {
   border: 1px solid #fff;
@@ -305,6 +325,137 @@ main {
   bottom: 50%;
   -webkit-transform: translate(-50%, 50%) rotate(-45deg);
   transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+.hero {
+  position: relative;
+}
+.hero .auto__container {
+  max-width: 1240px;
+}
+.hero__bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero__bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero__inner {
+  padding: 500px 0 60px;
+}
+.hero__inner-content {
+  padding: 40px 50px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+.hero__inner-content::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #07205C;
+  opacity: 0.95;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  z-index: -1;
+}
+.hero__inner .button__row {
+  display: none;
+}
+.hero__inner h1 {
+  margin-bottom: 10px;
+}
+.hero__inner h3 {
+  margin-bottom: 30px;
+}
+.hero__inner p strong {
+  font-weight: 600;
+}
+
+.intro {
+  margin-top: 20px;
+  background-color: #07205C;
+}
+.intro__inner-top {
+  padding: 40px 0 30px;
+  color: #fff;
+}
+.intro__inner-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 16px;
+}
+.intro__inner-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.intro__inner-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.intro__inner-links hr {
+  width: 1px;
+  height: 72px;
+  background-color: #fff;
+  margin: 0 50px;
+}
+.introItem__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+.introItem__icon svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.introItem:nth-last-of-type(2) .introItem__icon {
+  width: 90px;
 }
 
 .testimonials {
