@@ -53,6 +53,8 @@
     @include intro-xlg-xxlg;
     @include about-xlg-xxlg;
     @include benefits-xlg-xxlg;
+    @include footer-xlg-xxlg;
+
 
 }
 // 1024px
@@ -109,7 +111,7 @@
     @include info-md-lg;
     @include intro-md-lg;
     @include about-md-lg;
-
+    @include footer-md-lg;
 }
 // 840px
 @include  md-lg-extra{
@@ -159,6 +161,9 @@
     @include info-sm-md;
     @include benefits-sm-md;
     @include testimonials-sm-md;
+    @include footer-sm-md;
+    
+
 }
 // 650px
 @include sm-md-extra {
@@ -214,6 +219,8 @@
     @include about-xxxsm-xxsm;
     @include testimonials-xxxsm-xxsm;
     @include inventory-xxxsm-xxsm;
+    @include footer-xxxsm-xxsm;
+
 }
 // 320px
 @include sm{
