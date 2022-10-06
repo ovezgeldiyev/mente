@@ -79,7 +79,7 @@
   }
 }
 @mixin xxxsm-xxsm {
-  @media (max-width: 390px) {
+  @media (max-width: 370px) {
     @content;
   }
 }
@@ -100,6 +100,11 @@
 }
 @mixin sm-md {
   @media (max-width: 750px) {
+    @content;
+  }
+}
+@mixin sm-md-l {
+  @media (max-width: 767px) {
     @content;
   }
 }

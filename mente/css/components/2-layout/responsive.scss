@@ -1,7 +1,8 @@
 // 1550px
 @include xxxxxlg-xxxxxxlg {
-    @include intro-xxxxxlg-xxxxxxlg;
     @include hero-xxxxxlg-xxxxxxlg;
+    @include intro-xxxxxlg-xxxxxxlg;
+    @include benefits-xxxxxlg-xxxxxxlg;
 
 }
 // 1450px
@@ -51,6 +52,7 @@
     @include inventory-xlg-xxlg;
     @include intro-xlg-xxlg;
     @include about-xlg-xxlg;
+    @include benefits-xlg-xxlg;
 
 }
 // 1024px
@@ -92,22 +94,34 @@
     @include intro-lg-xlg;
     @include about-lg-xlg;
     @include info-lg-xlg;
+    @include benefits-lg-xlg;
 
 }
 // 930px
 @include md-lg {
+    h2 {
+        font-size: 45px;
+        line-height: 53px;
+    }
     @include hero-md-lg;
     @include inventory-md-lg;
+    @include benefits-md-lg;
+    @include info-md-lg;
+    @include intro-md-lg;
+    @include about-md-lg;
 
 }
 // 840px
 @include  md-lg-extra{
     @include testimonials-md-lg-extra;
     @include inventory-md-lg-extra;
-    @include intro-md-lg;
-    @include about-md-lg;
-    @include info-md-lg;
 
+}
+// 767px
+@include sm-md-l {
+    main {
+        margin-top: 129px;
+    }
 }
 // 750px
 @include sm-md {
@@ -143,9 +157,8 @@
     @include intro-sm-md;
     @include about-sm-md;
     @include info-sm-md;
+    @include benefits-sm-md;
     @include testimonials-sm-md;
-
-
 }
 // 650px
 @include sm-md-extra {
@@ -181,14 +194,9 @@
     @include intro-xxsm-xsm;
     @include about-xxsm-xsm;
     @include inventory-xxsm-xsm;
-
-
 }
 // 370px
 @include xxxsm-xxsm  {
-    // @include hero-xxxsm-xxsm;
-     @include testimonials-xxxsm-xxsm;
-     @include inventory-xxxsm-xxsm;
      .button {
         font-size: 15px;
         &__row {
@@ -204,10 +212,9 @@
         }
     }
     @include about-xxxsm-xxsm;
-
+    @include testimonials-xxxsm-xxsm;
+    @include inventory-xxxsm-xxsm;
 }
-
-
 // 320px
 @include sm{
     @include inventory-sm;
