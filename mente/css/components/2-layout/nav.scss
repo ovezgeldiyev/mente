@@ -130,8 +130,7 @@
         z-index: 1000;
         background: $black;
         width: 100%;
-        overflow-x: hidden;
-        overflow-y: auto;
+        overflow: hidden;
         display: none;
         &.active {
             display: block;

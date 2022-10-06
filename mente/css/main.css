@@ -1803,8 +1803,7 @@ button {
     z-index: 1000;
     background: #000;
     width: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
     display: none;
   }
   .nav.active {
