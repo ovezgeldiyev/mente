@@ -185,15 +185,7 @@
     // @include hero-xxxsm-xxsm;
      @include testimonials-xxxsm-xxsm;
      @include inventory-xxxsm-xxsm;
-
-
-}
-
-
-// 320px
-@include sm{
-    @include inventory-sm;
-    .button {
+     .button {
         font-size: 15px;
         &__row {
             .button {
@@ -208,5 +200,13 @@
         }
     }
     @include about-xxxsm-xxsm;
+
+}
+
+
+// 320px
+@include sm{
+    @include inventory-sm;
+
 }
 
