@@ -516,6 +516,14 @@ button {
   padding: 500px 0 60px;
   position: relative;
 }
+.hero .slick-track {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: stretch !important;
+      -ms-flex-align: stretch !important;
+          align-items: stretch !important;
+}
 .hero .slick-arrow {
   z-index: 99;
   background-color: #fff;
