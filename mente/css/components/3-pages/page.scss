@@ -67,7 +67,7 @@
             line-height: 26px;
             margin-left: 10px;
           }
-          &-wraper {
+          &-wrapper {
             display: flex;
             justify-content: flex-start;
             align-items: flex-end;
@@ -100,29 +100,26 @@
             color: $blue;
             margin-bottom: 34px;
           }
-          &-buttons {
-            display: flex;
-            .button {
-              &.primary {
-                font-size: 18px;
-                line-height: 26px;
-                text-transform: uppercase;
-                color: $white;
-                font-weight: 700;
-                background-color: $blue;
-                padding: 8px 31px;
-                border: 1px solid $blue;
-              }
-              &.secondary {
-                font-size: 18px;
-                line-height: 26px;
-                text-transform: uppercase;
-                color: $blue;
-                font-weight: 700;
-                border: 1px solid $blue;
-                padding: 8px 15px;
-                margin: 0 21px 0 0;
-              }
+          .button {
+            &.primary {
+              font-size: 18px;
+              line-height: 26px;
+              text-transform: uppercase;
+              color: $white;
+              font-weight: 700;
+              background-color: $blue;
+              padding: 8px 31px;
+              border: 1px solid $blue;
+            }
+            &.secondary {
+              font-size: 18px;
+              line-height: 26px;
+              text-transform: uppercase;
+              color: $blue;
+              font-weight: 700;
+              border: 1px solid $blue;
+              padding: 8px 15px;
+              margin: 0 21px 0 0;
             }
           }
         }
@@ -172,22 +169,23 @@
       &-main {
         .inventoryItem {
           margin-bottom: 80px;
+          &__icons {
+            h4 {
+              font-size: 18px;
+              line-height: 23px;
+            }
+            strong {
+              font-size: 22px;
+              line-height: 22px;
+            }
+          }
           &__content {
             padding: 50px 35px 40px 0;
             h2 {
               font-size: 40px;
               line-height: 50px;
             }
-            .inventoryItem__icons {
-              h4 {
-                font-size: 18px;
-                line-height: 23px;
-              }
-              strong {
-                font-size: 22px;
-                line-height: 22px;
-              }
-            }
+
             p {
               font-size: 18px;
               line-height: 28px;
@@ -196,16 +194,14 @@
               margin-bottom: 30px;
               width: 100%;
             }
-            &-buttons {
-              .button {
-                &.secondary {
-                  font-size: 16px;
-                  line-height: 22px;
-                }
-                &.primary {
-                  font-size: 16px;
-                  line-height: 22px;
-                }
+            .button {
+              &.secondary {
+                font-size: 16px;
+                line-height: 22px;
+              }
+              &.primary {
+                font-size: 16px;
+                line-height: 22px;
               }
             }
           }
@@ -226,26 +222,27 @@
       &-main {
         .inventoryItem {
           margin-bottom: 70px;
+          &__icons {
+            span {
+              max-width: 50px;
+              max-height: 28px;
+            }
+            h4 {
+              font-size: 16px;
+              line-height: 22px;
+            }
+            strong {
+              font-size: 20px;
+              line-height: 22px;
+            }
+          }
           &__content {
             padding: 30px 20px 30px 0;
             h2 {
               font-size: 35px;
               line-height: 45px;
             }
-            .inventoryItem__icons {
-              span {
-                max-width: 50px;
-                max-height: 28px;
-              }
-              h4 {
-                font-size: 16px;
-                line-height: 22px;
-              }
-              strong {
-                font-size: 20px;
-                line-height: 22px;
-              }
-            }
+
             p {
               font-size: 16px;
               line-height: 24px;
@@ -274,32 +271,31 @@
           &__image {
             width: calc(45% - 20px);
           }
+          &__icons {
+            h4 {
+              font-size: 14px;
+              line-height: 20px;
+            }
+            strong {
+              font-size: 18px;
+              line-height: 18px;
+            }
+          }
           &__content {
             width: calc(55% - 20px);
             h2 {
               font-size: 30px;
               line-height: 40px;
             }
-            .inventoryItem__icons {
-              h4 {
-                font-size: 14px;
+
+            .button {
+              &.secondary {
+                font-size: 15px;
                 line-height: 20px;
               }
-              strong {
-                font-size: 18px;
-                line-height: 18px;
-              }
-            }
-            &-buttons {
-              .button {
-                &.secondary {
-                  font-size: 15px;
-                  line-height: 20px;
-                }
-                &.primary {
-                  font-size: 15px;
-                  line-height: 20px;
-                }
+              &.primary {
+                font-size: 15px;
+                line-height: 20px;
               }
             }
           }
@@ -324,6 +320,19 @@
           &__image {
             width: calc(45% - 15px);
           }
+          &__icons {
+            span {
+              height: 24px;
+            }
+            h4 {
+              font-size: 12px;
+              line-height: 15px;
+            }
+            strong {
+              font-size: 16px;
+              line-height: 16px;
+            }
+          }
           &__content {
             width: calc(55% - 15px);
             padding: 20px 20px 20px 0;
@@ -337,32 +346,18 @@
               line-height: 24px;
               margin-bottom: 20px;
             }
-            .inventoryItem__icons {
-              span {
-                height: 24px;
-              }
-              h4 {
-                font-size: 12px;
-                line-height: 15px;
-              }
-              strong {
-                font-size: 16px;
-                line-height: 16px;
-              }
-            }
+
             &-row {
               margin-bottom: 20px;
             }
-            &-buttons {
-              .button {
-                &.secondary {
-                  font-size: 14px;
-                  line-height: 18px;
-                }
-                &.primary {
-                  font-size: 14px;
-                  line-height: 18px;
-                }
+            .button {
+              &.secondary {
+                font-size: 14px;
+                line-height: 18px;
+              }
+              &.primary {
+                font-size: 14px;
+                line-height: 18px;
               }
             }
           }
@@ -385,8 +380,20 @@
       &-main {
         .inventoryItem {
           margin-bottom: 40px;
-          &__image {
+          &__icons {
+            span {
+              max-width: 35px;
+              max-height: 20px;
+            }
+            h4 {
+              font-size: 12px;
+              line-height: 15px;
+            }
+            strong {
+              line-height: 16px;
+            }
           }
+
           &__content {
             h2 {
               font-size: 22px;
@@ -398,31 +405,17 @@
               line-height: 20px;
               margin-bottom: 15px;
             }
-            .inventoryItem__icons {
-              span {
-                max-width: 35px;
-                max-height: 20px;
-              }
-              h4 {
-                font-size: 12px;
-                line-height: 15px;
-              }
-              strong {
+
+            .button {
+              &.secondary {
+                padding: 8px 10px;
+                font-size: 13px;
                 line-height: 16px;
               }
-            }
-            &-buttons {
-              .button {
-                &.secondary {
-                  padding: 8px 10px;
-                  font-size: 13px;
-                  line-height: 16px;
-                }
-                &.primary {
-                  padding: 8px 22px;
-                  font-size: 13px;
-                  line-height: 16px;
-                }
+              &.primary {
+                padding: 8px 22px;
+                font-size: 13px;
+                line-height: 16px;
               }
             }
           }
@@ -446,8 +439,18 @@
           &__image {
             width: calc(45% - 10px);
           }
+          &__icons {
+            span {
+              max-width: 35px;
+              max-height: 20px;
+            }
+            h4 {
+              font-size: 11px;
+              line-height: 13px;
+            }
+          }
           &__content {
-            padding: 20px 10px 20px 0;
+            padding: 20px 20px 20px 0;
             width: calc(55% - 10px);
             h2 {
               font-size: 22px;
@@ -459,16 +462,7 @@
               line-height: 20px;
               margin-bottom: 15px;
             }
-            .inventoryItem__icons {
-              span {
-                max-width: 35px;
-                max-height: 20px;
-              }
-              h4 {
-                font-size: 11px;
-                line-height: 13px;
-              }
-            }
+
             &-row {
               margin-bottom: 20px;
             }
@@ -496,11 +490,39 @@
         .inventoryItem {
           flex-direction: column;
           margin-bottom: 50px;
+          &__icons {
+            margin-bottom: 30px;
+            width: calc(33.3% - 30px);
+            text-align: center;
+            span {
+              max-width: 50px;
+              max-height: 40px;
+              height: 35px;
+              margin: 0 auto;
+            }
+            &-wrapper {
+              justify-content: center;
+              span {
+                margin: unset;
+              }
+            }
+
+            h4 {
+              font-size: 20px;
+              line-height: 20px;
+            }
+            strong {
+              font-size: 25px;
+              line-height: 25px;
+            }
+          }
           &:last-child {
             margin-bottom: 50px;
           }
           &__wrapper {
             display: none;
+            animation-name: fadeInUp;
+            animation-duration: 0.4s;
             &.active {
               display: block;
             }
@@ -516,7 +538,7 @@
             }
           }
           &__content {
-            padding: 0 24px;
+            padding: 0 20px;
             width: 100%;
             h2 {
               font-size: 37px;
@@ -528,52 +550,37 @@
               line-height: 33px;
               margin-bottom: 30px;
             }
-            .inventoryItem__icons {
-              margin-bottom: 30px;
-              span {
-                max-width: 50px;
-                max-height: 40px;
-                height: 35px;
-              }
 
-              h4 {
-                font-size: 20px;
-                line-height: 20px;
-              }
-              strong {
-                font-size: 25px;
-                line-height: 25px;
-              }
-            }
             &-row {
               flex-wrap: wrap;
               margin-bottom: unset;
+              justify-content: center;
               hr {
                 max-height: 62px;
                 margin: 0 15px;
+                &:nth-last-of-type(2) {
+                  display: none;
+                }
               }
             }
-            &-buttons {
-              .button {
-                &.secondary {
-                  font-size: 18px;
-                  line-height: 26px;
-                  margin-right: 15px;
-                  padding: 8px 17px;
-                }
-                &.primary {
-                  font-size: 18px;
-                  line-height: 26px;
-                  padding: 8px 27px;
-                }
+            .button {
+              &.secondary {
+                font-size: 18px;
+                line-height: 26px;
+                margin-right: 15px;
+                padding: 8px 15px;
+              }
+              &.primary {
+                font-size: 18px;
+                line-height: 26px;
+                padding: 8px 31px;
               }
             }
           }
         }
-        & > .button{
-          
+        & > .button {
           display: block;
-          max-width: 331px;
+          max-width: 334px;
           width: 100%;
         }
       }
@@ -590,9 +597,44 @@
     &__inner {
       &-main {
         .inventoryItem {
+          &__icons {
+            text-align: left;
+            &-wrapper {
+              justify-content: flex-start;
+            }
+            span {
+              margin: unset;
+            }
+          }
           &__content {
             &-row {
-              justify-content: center;
+              justify-content: flex-start;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// 440px
+@mixin inventory-xxsm-xsm {
+  .inventory {
+    &__inner {
+      &-main {
+        .inventoryItem {
+          &__icons {
+          }
+          &__content {
+            &-row {
+              align-items: flex-start;
+              .inventoryItem__icons {
+                &:last-child {
+                  width: 40%;
+                }
+              }
+              hr {
+                height: 62px;
+              }
             }
           }
         }
@@ -620,6 +662,32 @@
               min-height: 300px;
             }
           }
+          &__icons {
+            width: calc(50% - 20px);
+            margin-bottom: 25px;
+            text-align: center;
+
+            span {
+              max-width: 45px;
+              max-height: 35px;
+              margin: 0 auto;
+            }
+            &-wrapper {
+              justify-content: center;
+              span {
+                margin: unset;
+              }
+            }
+
+            h4 {
+              font-size: 18px;
+              line-height: 18px;
+            }
+            strong {
+              font-size: 20px;
+              line-height: 20px;
+            }
+          }
           &__content {
             padding: 0 20px;
             h2 {
@@ -632,50 +700,52 @@
               line-height: 28px;
               margin-bottom: 30px;
             }
-            .inventoryItem__icons {
-              margin-bottom: 25px;
-              span {
-                max-width: 45px;
-                max-height: 35px;
+            .button {
+              text-align: center;
+              &.secondary {
+                font-size: 12px;
+                line-height: 14px;
+                margin-right: 15px;
               }
-
-              h4 {
-                font-size: 18px;
-                line-height: 18px;
-              }
-              strong {
-                font-size: 20px;
-                line-height: 20px;
+              &.primary {
+                font-size: 12px;
+                line-height: 14px;
+                margin-right: unset;
               }
             }
-
-            &-buttons {
-              .button {
-                &.secondary {
-                  font-size: 12px;
-                  line-height: 14px;
-                  margin-right: 15px;
+            &-row {
+              justify-content: space-between;
+              position: relative;
+              &:after {
+                content: "";
+                width: 1px;
+                height: calc(100% - 30px);
+                background-color: $blue;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+              .inventoryItem__icons {
+                &:last-child {
+                  width: calc(50% - 20px);
                 }
-                &.primary {
-                  font-size: 12px;
-                  line-height: 14px;
-                }
+              }
+              hr {
+                display: none;
               }
             }
           }
         }
-        .button__wrapper{
-          .more{
+        & > .button {
+          &.more {
             font-size: 12px;
             line-height: 14px;
-            max-width: 252px;
+            max-width: 259px;
+            width: 84%;
           }
         }
-      
       }
-    }
-    .auto__container {
-      padding: 0;
     }
   }
 }
@@ -684,20 +754,20 @@
 @mixin inventory-sm {
   .inventory {
     &__inner {
-      h2{
+      h2 {
         font-size: 25px;
         line-height: 30px;
         padding: 10px 0;
       }
       &-main {
         .inventoryItem {
-          &__image{
-            img{
+          &__image {
+            img {
               max-height: 250px;
-              min-height:250px ;
+              min-height: 250px;
             }
           }
-          
+
           &__content {
             &-row {
               justify-content: space-between;
@@ -710,7 +780,7 @@
 }
 
 .testimonials {
-  background-color: $gray3;
+  position: relative;
   &__inner {
     padding: 66px 0 105px;
     h3 {
@@ -850,6 +920,33 @@
       }
     }
   }
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: $gray3;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: .1;
+    }
+  }
 }
 // 1380px
 @mixin testimonials-xxxlg-xxxxlg {
@@ -861,10 +958,10 @@
             top: 50%;
           }
           &-next {
-            right: -2%;
+            right: -1%;
           }
           &-prev {
-            left: -2%;
+            left: -1%;
           }
         }
       }
@@ -885,6 +982,9 @@
           p {
             font-size: 18px;
             line-height: 34px;
+            br {
+              display: none;
+            }
           }
           &__image {
             margin-bottom: 25px;
@@ -938,7 +1038,7 @@
 @mixin testimonials-sm-md {
   .testimonials {
     &__inner {
-      padding: 50px 0 60px;
+      padding: 50px 10px 60px;
       h3 {
         font-size: 24px;
         line-height: 28px;
@@ -960,13 +1060,13 @@
             border-width: 4px 0 0 4px;
             width: 18px;
             height: 18px;
-            left: -1%;
+            left: -5px;
           }
           &-next {
             border-width: 0 4px 4px 0;
             width: 18px;
             height: 18px;
-            right: -1%;
+            right: -5px;
           }
         }
       }
@@ -1090,7 +1190,9 @@
             font-size: 17px;
             line-height: 27px;
             margin-bottom: 30px;
-            max-height: 352px;
+            &.tabEvent {
+              max-height: 328px;
+            }
           }
           &__image {
             width: 90px;
@@ -1107,5 +1209,19 @@
         }
       }
     }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 25%, 0);
+    transform: translate3d(0, 25%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
