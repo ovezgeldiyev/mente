@@ -1730,7 +1730,7 @@ button {
     line-height: 32px;
     margin-bottom: 0;
     width: 100%;
-    padding: 30px 0;
+    padding: 30px 20px;
   }
   .inventory__inner-main .inventoryItem {
     -webkit-box-orient: vertical;
@@ -1742,18 +1742,14 @@ button {
   .inventory__inner-main .inventoryItem__icons {
     margin-bottom: 30px;
     width: calc(33.3% - 30px);
-    text-align: center;
   }
   .inventory__inner-main .inventoryItem__icons span {
     max-width: 50px;
     max-height: 40px;
     height: 35px;
-    margin: 0 auto;
   }
-  .inventory__inner-main .inventoryItem__icons-wrapper {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .inventory__inner-main .inventoryItem__icons span.center {
+    margin: unset;
   }
   .inventory__inner-main .inventoryItem__icons-wrapper span {
     margin: unset;
@@ -1807,9 +1803,9 @@ button {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-bottom: unset;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .inventory__inner-main .inventoryItem__content-row hr {
     max-height: 62px;
@@ -2323,7 +2319,7 @@ button {
     height: 62px;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 370px) {
   .testimonials__inner {
     padding: 50px 0;
   }
@@ -2337,8 +2333,8 @@ button {
     padding: 0 5px 20px;
   }
   .testimonials__inner-slider .testimonialsItem p {
-    font-size: 17px;
-    line-height: 27px;
+    font-size: 16px;
+    line-height: 25px;
     margin-bottom: 30px;
   }
   .testimonials__inner-slider .testimonialsItem p.tabEvent {
@@ -2385,6 +2381,9 @@ button {
     max-height: 35px;
     margin: 0 auto;
   }
+  .inventory__inner-main .inventoryItem__icons span.center {
+    margin: 0 auto;
+  }
   .inventory__inner-main .inventoryItem__icons-wrapper {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -2410,8 +2409,8 @@ button {
     margin-bottom: 30px;
   }
   .inventory__inner-main .inventoryItem__content p {
-    font-size: 17px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 25px;
     margin-bottom: 30px;
   }
   .inventory__inner-main .inventoryItem__content .button {

@@ -484,7 +484,7 @@
         line-height: 32px;
         margin-bottom: 0;
         width: 100%;
-        padding: 30px 0;
+        padding: 30px 20px;
       }
       &-main {
         .inventoryItem {
@@ -493,15 +493,15 @@
           &__icons {
             margin-bottom: 30px;
             width: calc(33.3% - 30px);
-            text-align: center;
             span {
               max-width: 50px;
               max-height: 40px;
               height: 35px;
-              margin: 0 auto;
+              &.center{
+                margin: unset;
+              }
             }
             &-wrapper {
-              justify-content: center;
               span {
                 margin: unset;
               }
@@ -554,7 +554,7 @@
             &-row {
               flex-wrap: wrap;
               margin-bottom: unset;
-              justify-content: center;
+              justify-content: flex-start;
               hr {
                 max-height: 62px;
                 margin: 0 15px;
@@ -643,8 +643,8 @@
   }
 }
 
-// 390px
-@mixin inventory-xxxsm-xxsm {
+// 370px
+@mixin inventory-xxxsm-xxsm{
   .inventory {
     &__inner {
       h2 {
@@ -671,6 +671,9 @@
               max-width: 45px;
               max-height: 35px;
               margin: 0 auto;
+              &.center{
+                margin: 0 auto;
+              }
             }
             &-wrapper {
               justify-content: center;
@@ -696,8 +699,8 @@
               margin-bottom: 30px;
             }
             p {
-              font-size: 17px;
-              line-height: 28px;
+              font-size: 16px;
+              line-height: 25px;
               margin-bottom: 30px;
             }
             .button {
@@ -1172,7 +1175,7 @@
   }
 }
 
-// 390px
+// 370px
 @mixin testimonials-xxxsm-xxsm {
   .testimonials {
     &__inner {
@@ -1187,8 +1190,8 @@
         padding: 0 5px 20px;
         .testimonialsItem {
           p {
-            font-size: 17px;
-            line-height: 27px;
+            font-size: 16px;
+            line-height: 25px;
             margin-bottom: 30px;
             &.tabEvent {
               max-height: 328px;
