@@ -127,21 +127,10 @@
           }
         }
       }
-      .button__wrapper{
-        padding:  0 24px;
-        .more {
-          font-size: 18px;
-          line-height: 26px;
-          text-transform: uppercase;
-          color: $blue;
-          font-weight: 700;
-          border: 1px solid $blue;
-          padding: 8px 15px;
-          display: none;
-          font-weight: 700;
-        }
+      & > .button {
+        display: none;
+        margin: 0 20px;
       }
-      
     }
   }
 }
@@ -483,8 +472,6 @@
             &-row {
               margin-bottom: 20px;
             }
-            &-buttons {
-            }
           }
         }
       }
@@ -598,14 +585,12 @@
             }
           }
         }
-        .button__wrapper{
-          .more{
-            display: block;
-            max-width: 331px;
-            width: 100%;
-          }
+        & > .button{
+          
+          display: block;
+          max-width: 331px;
+          width: 100%;
         }
-       
       }
     }
     .auto__container {
