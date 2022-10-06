@@ -6,6 +6,7 @@ h1 {
 }
 
 h2 {
+<<<<<<< HEAD
   font-weight: 400;
   font-size: 70px;
   line-height: 77px;
@@ -17,6 +18,15 @@ h2 {
     font-size: 45px;
     line-height: 56px;
   }
+=======
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 77px;
+    &.sm {
+        font-size: 46px;
+        line-height: 56px;
+    }
+>>>>>>> a79bf90e73253b92953238e884639c31d94f194c
 }
 h3 {
   font-size: 30px;
@@ -45,8 +55,13 @@ h6 {
 p {
 }
 main {
+<<<<<<< HEAD
   overflow: hidden;
   padding: 200px 0;
+=======
+    overflow: hidden;
+    // padding: 200px 0;
+>>>>>>> a79bf90e73253b92953238e884639c31d94f194c
 }
 .button {
   display: flex;
@@ -59,10 +74,37 @@ main {
   &__row {
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     .button {
       &:first-child {
         margin-right: 24px;
       }
+=======
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    &__row {
+        display: flex;
+        align-items: center;
+        .button {
+            &:first-child {
+                margin-right: 24px;
+            }
+        }
+    }
+    &.primary {
+        border: 1px solid $white;
+        color: $white;
+        padding: 10px 15px;
+        background-color: $primary;
+    }
+    &.secondary {
+        padding: 10px 35px;
+        background-color: $white;
+        color: $gray2;
+        border: 1px solid transparent;
+>>>>>>> a79bf90e73253b92953238e884639c31d94f194c
     }
   }
   &.primary {
