@@ -814,7 +814,7 @@ button {
   line-height: 26px;
   margin-left: 10px;
 }
-.inventory__inner-main .inventoryItem__icons-wraper {
+.inventory__inner-main .inventoryItem__icons-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -857,12 +857,7 @@ button {
   color: #09225A;
   margin-bottom: 34px;
 }
-.inventory__inner-main .inventoryItem__content-buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.inventory__inner-main .inventoryItem__content-buttons .button.primary {
+.inventory__inner-main .inventoryItem__content .button.primary {
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
@@ -872,7 +867,7 @@ button {
   padding: 8px 31px;
   border: 1px solid #09225A;
 }
-.inventory__inner-main .inventoryItem__content-buttons .button.secondary {
+.inventory__inner-main .inventoryItem__content .button.secondary {
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
@@ -888,7 +883,7 @@ button {
 }
 
 .testimonials {
-  background-color: #818388;
+  position: relative;
 }
 .testimonials__inner {
   padding: 66px 0 105px;
@@ -1025,7 +1020,60 @@ button {
 .testimonials__inner-slider .slick-prev::before {
   display: none;
 }
+.testimonials__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.testimonials__bg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #818388;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.testimonials__bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+}
 
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 25%, 0);
+    transform: translate3d(0, 25%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 25%, 0);
+    transform: translate3d(0, 25%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
 @media (max-width: 1550px) {
   .intro__inner-row p {
     width: calc(36% - 10px);
@@ -1097,10 +1145,10 @@ button {
     top: 50%;
   }
   .testimonials__inner-slider .slick-next {
-    right: -2%;
+    right: -1%;
   }
   .testimonials__inner-slider .slick-prev {
-    left: -2%;
+    left: -1%;
   }
 
   .inventory__inner h2 {
@@ -1111,20 +1159,20 @@ button {
   .inventory__inner-main .inventoryItem {
     margin-bottom: 80px;
   }
+  .inventory__inner-main .inventoryItem__icons h4 {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .inventory__inner-main .inventoryItem__icons strong {
+    font-size: 22px;
+    line-height: 22px;
+  }
   .inventory__inner-main .inventoryItem__content {
     padding: 50px 35px 40px 0;
   }
   .inventory__inner-main .inventoryItem__content h2 {
     font-size: 40px;
     line-height: 50px;
-  }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons h4 {
-    font-size: 18px;
-    line-height: 23px;
-  }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons strong {
-    font-size: 22px;
-    line-height: 22px;
   }
   .inventory__inner-main .inventoryItem__content p {
     font-size: 18px;
@@ -1134,11 +1182,11 @@ button {
     margin-bottom: 30px;
     width: 100%;
   }
-  .inventory__inner-main .inventoryItem__content-buttons .button.secondary {
+  .inventory__inner-main .inventoryItem__content .button.secondary {
     font-size: 16px;
     line-height: 22px;
   }
-  .inventory__inner-main .inventoryItem__content-buttons .button.primary {
+  .inventory__inner-main .inventoryItem__content .button.primary {
     font-size: 16px;
     line-height: 22px;
   }
@@ -1170,24 +1218,24 @@ button {
   .inventory__inner-main .inventoryItem {
     margin-bottom: 70px;
   }
+  .inventory__inner-main .inventoryItem__icons span {
+    max-width: 50px;
+    max-height: 28px;
+  }
+  .inventory__inner-main .inventoryItem__icons h4 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .inventory__inner-main .inventoryItem__icons strong {
+    font-size: 20px;
+    line-height: 22px;
+  }
   .inventory__inner-main .inventoryItem__content {
     padding: 30px 20px 30px 0;
   }
   .inventory__inner-main .inventoryItem__content h2 {
     font-size: 35px;
     line-height: 45px;
-  }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons span {
-    max-width: 50px;
-    max-height: 28px;
-  }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons h4 {
-    font-size: 16px;
-    line-height: 22px;
-  }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons strong {
-    font-size: 20px;
-    line-height: 22px;
   }
   .inventory__inner-main .inventoryItem__content p {
     font-size: 16px;
@@ -1213,6 +1261,14 @@ button {
   .inventory__inner-main .inventoryItem__image {
     width: calc(45% - 20px);
   }
+  .inventory__inner-main .inventoryItem__icons h4 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .inventory__inner-main .inventoryItem__icons strong {
+    font-size: 18px;
+    line-height: 18px;
+  }
   .inventory__inner-main .inventoryItem__content {
     width: calc(55% - 20px);
   }
@@ -1220,19 +1276,11 @@ button {
     font-size: 30px;
     line-height: 40px;
   }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons h4 {
-    font-size: 14px;
-    line-height: 20px;
-  }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons strong {
-    font-size: 18px;
-    line-height: 18px;
-  }
-  .inventory__inner-main .inventoryItem__content-buttons .button.secondary {
+  .inventory__inner-main .inventoryItem__content .button.secondary {
     font-size: 15px;
     line-height: 20px;
   }
-  .inventory__inner-main .inventoryItem__content-buttons .button.primary {
+  .inventory__inner-main .inventoryItem__content .button.primary {
     font-size: 15px;
     line-height: 20px;
   }
@@ -1334,6 +1382,9 @@ button {
     font-size: 18px;
     line-height: 34px;
   }
+  .testimonials__inner-slider .testimonialsItem p br {
+    display: none;
+  }
   .testimonials__inner-slider .testimonialsItem__image {
     margin-bottom: 25px;
   }
@@ -1350,6 +1401,17 @@ button {
   .inventory__inner-main .inventoryItem__image {
     width: calc(45% - 15px);
   }
+  .inventory__inner-main .inventoryItem__icons span {
+    height: 24px;
+  }
+  .inventory__inner-main .inventoryItem__icons h4 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .inventory__inner-main .inventoryItem__icons strong {
+    font-size: 16px;
+    line-height: 16px;
+  }
   .inventory__inner-main .inventoryItem__content {
     width: calc(55% - 15px);
     padding: 20px 20px 20px 0;
@@ -1364,25 +1426,14 @@ button {
     line-height: 24px;
     margin-bottom: 20px;
   }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons span {
-    height: 24px;
-  }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons h4 {
-    font-size: 12px;
-    line-height: 15px;
-  }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons strong {
-    font-size: 16px;
-    line-height: 16px;
-  }
   .inventory__inner-main .inventoryItem__content-row {
     margin-bottom: 20px;
   }
-  .inventory__inner-main .inventoryItem__content-buttons .button.secondary {
+  .inventory__inner-main .inventoryItem__content .button.secondary {
     font-size: 14px;
     line-height: 18px;
   }
-  .inventory__inner-main .inventoryItem__content-buttons .button.primary {
+  .inventory__inner-main .inventoryItem__content .button.primary {
     font-size: 14px;
     line-height: 18px;
   }
@@ -1463,6 +1514,17 @@ button {
   .inventory__inner-main .inventoryItem {
     margin-bottom: 40px;
   }
+  .inventory__inner-main .inventoryItem__icons span {
+    max-width: 35px;
+    max-height: 20px;
+  }
+  .inventory__inner-main .inventoryItem__icons h4 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .inventory__inner-main .inventoryItem__icons strong {
+    line-height: 16px;
+  }
   .inventory__inner-main .inventoryItem__content h2 {
     font-size: 22px;
     line-height: 28px;
@@ -1473,23 +1535,12 @@ button {
     line-height: 20px;
     margin-bottom: 15px;
   }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons span {
-    max-width: 35px;
-    max-height: 20px;
-  }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons h4 {
-    font-size: 12px;
-    line-height: 15px;
-  }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons strong {
-    line-height: 16px;
-  }
-  .inventory__inner-main .inventoryItem__content-buttons .button.secondary {
+  .inventory__inner-main .inventoryItem__content .button.secondary {
     padding: 8px 10px;
     font-size: 13px;
     line-height: 16px;
   }
-  .inventory__inner-main .inventoryItem__content-buttons .button.primary {
+  .inventory__inner-main .inventoryItem__content .button.primary {
     padding: 8px 22px;
     font-size: 13px;
     line-height: 16px;
@@ -1538,8 +1589,16 @@ button {
   .inventory__inner-main .inventoryItem__image {
     width: calc(45% - 10px);
   }
+  .inventory__inner-main .inventoryItem__icons span {
+    max-width: 35px;
+    max-height: 20px;
+  }
+  .inventory__inner-main .inventoryItem__icons h4 {
+    font-size: 11px;
+    line-height: 13px;
+  }
   .inventory__inner-main .inventoryItem__content {
-    padding: 20px 10px 20px 0;
+    padding: 20px 20px 20px 0;
     width: calc(55% - 10px);
   }
   .inventory__inner-main .inventoryItem__content h2 {
@@ -1551,14 +1610,6 @@ button {
     font-size: 13px;
     line-height: 20px;
     margin-bottom: 15px;
-  }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons span {
-    max-width: 35px;
-    max-height: 20px;
-  }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons h4 {
-    font-size: 11px;
-    line-height: 13px;
   }
   .inventory__inner-main .inventoryItem__content-row {
     margin-bottom: 20px;
@@ -1688,11 +1739,42 @@ button {
             flex-direction: column;
     margin-bottom: 50px;
   }
+  .inventory__inner-main .inventoryItem__icons {
+    margin-bottom: 30px;
+    width: calc(33.3% - 30px);
+    text-align: center;
+  }
+  .inventory__inner-main .inventoryItem__icons span {
+    max-width: 50px;
+    max-height: 40px;
+    height: 35px;
+    margin: 0 auto;
+  }
+  .inventory__inner-main .inventoryItem__icons-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .inventory__inner-main .inventoryItem__icons-wrapper span {
+    margin: unset;
+  }
+  .inventory__inner-main .inventoryItem__icons h4 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .inventory__inner-main .inventoryItem__icons strong {
+    font-size: 25px;
+    line-height: 25px;
+  }
   .inventory__inner-main .inventoryItem:last-child {
     margin-bottom: 50px;
   }
   .inventory__inner-main .inventoryItem__wrapper {
     display: none;
+    -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+    -webkit-animation-duration: 0.4s;
+            animation-duration: 0.4s;
   }
   .inventory__inner-main .inventoryItem__wrapper.active {
     display: block;
@@ -1708,7 +1790,7 @@ button {
     min-height: 350px;
   }
   .inventory__inner-main .inventoryItem__content {
-    padding: 0 24px;
+    padding: 0 20px;
     width: 100%;
   }
   .inventory__inner-main .inventoryItem__content h2 {
@@ -1720,33 +1802,6 @@ button {
     font-size: 20px;
     line-height: 33px;
     margin-bottom: 30px;
-  }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons {
-    margin-bottom: 30px;
-    width: calc(33.3% - 30px);
-    text-align: center;
-  }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons span {
-    max-width: 50px;
-    max-height: 40px;
-    height: 35px;
-    margin: 0 auto;
-  }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons-wraper {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons-wraper span {
-    margin: unset;
-  }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons h4 {
-    font-size: 20px;
-    line-height: 20px;
-  }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons strong {
-    font-size: 25px;
-    line-height: 25px;
   }
   .inventory__inner-main .inventoryItem__content-row {
     -ms-flex-wrap: wrap;
@@ -1763,20 +1818,20 @@ button {
   .inventory__inner-main .inventoryItem__content-row hr:nth-last-of-type(2) {
     display: none;
   }
-  .inventory__inner-main .inventoryItem__content-buttons .button.secondary {
+  .inventory__inner-main .inventoryItem__content .button.secondary {
     font-size: 18px;
     line-height: 26px;
     margin-right: 15px;
-    padding: 8px 17px;
+    padding: 8px 15px;
   }
-  .inventory__inner-main .inventoryItem__content-buttons .button.primary {
+  .inventory__inner-main .inventoryItem__content .button.primary {
     font-size: 18px;
     line-height: 26px;
-    padding: 8px 27px;
+    padding: 8px 31px;
   }
   .inventory__inner-main > .button {
     display: block;
-    max-width: 331px;
+    max-width: 334px;
     width: 100%;
   }
   .inventory .auto__container {
@@ -1827,6 +1882,37 @@ button {
   }
   .infoItem h3 {
     margin-bottom: 6px;
+  }
+
+  .testimonials__inner {
+    padding: 50px 10px 60px;
+  }
+  .testimonials__inner h3 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 20px;
+  }
+  .testimonials__inner-slider {
+    padding: 0 20px 60px;
+  }
+  .testimonials__inner-slider .testimonialsItem p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .testimonials__inner-slider .testimonialsItem__image {
+    margin-bottom: 20px;
+  }
+  .testimonials__inner-slider .slick-prev {
+    border-width: 4px 0 0 4px;
+    width: 18px;
+    height: 18px;
+    left: -5px;
+  }
+  .testimonials__inner-slider .slick-next {
+    border-width: 0 4px 4px 0;
+    width: 18px;
+    height: 18px;
+    right: -5px;
   }
 }
 @media (max-width: 650px) {
@@ -2137,8 +2223,13 @@ button {
   .inventory__inner-main .inventoryItem__icons {
     text-align: left;
   }
+  .inventory__inner-main .inventoryItem__icons-wrapper {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
   .inventory__inner-main .inventoryItem__icons span {
-    margin: 0 auto 0 0;
+    margin: unset;
   }
   .inventory__inner-main .inventoryItem__content-row {
     -webkit-box-pack: start;
@@ -2219,6 +2310,18 @@ button {
     color: #707070;
     min-height: 52px;
   }
+
+  .inventory__inner-main .inventoryItem__content-row {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .inventory__inner-main .inventoryItem__content-row .inventoryItem__icons:last-child {
+    width: 40%;
+  }
+  .inventory__inner-main .inventoryItem__content-row hr {
+    height: 62px;
+  }
 }
 @media (max-width: 390px) {
   .testimonials__inner {
@@ -2237,7 +2340,9 @@ button {
     font-size: 17px;
     line-height: 27px;
     margin-bottom: 30px;
-    max-height: 352px;
+  }
+  .testimonials__inner-slider .testimonialsItem p.tabEvent {
+    max-height: 328px;
   }
   .testimonials__inner-slider .testimonialsItem__image {
     width: 90px;
@@ -2270,6 +2375,32 @@ button {
   .inventory__inner-main .inventoryItem__image img {
     min-height: 300px;
   }
+  .inventory__inner-main .inventoryItem__icons {
+    width: calc(50% - 20px);
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .inventory__inner-main .inventoryItem__icons span {
+    max-width: 45px;
+    max-height: 35px;
+    margin: 0 auto;
+  }
+  .inventory__inner-main .inventoryItem__icons-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .inventory__inner-main .inventoryItem__icons-wrapper span {
+    margin: unset;
+  }
+  .inventory__inner-main .inventoryItem__icons h4 {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .inventory__inner-main .inventoryItem__icons strong {
+    font-size: 20px;
+    line-height: 20px;
+  }
   .inventory__inner-main .inventoryItem__content {
     padding: 0 20px;
   }
@@ -2283,37 +2414,47 @@ button {
     line-height: 28px;
     margin-bottom: 30px;
   }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons {
-    margin-bottom: 25px;
+  .inventory__inner-main .inventoryItem__content .button {
+    text-align: center;
   }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons span {
-    max-width: 45px;
-    max-height: 35px;
-  }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons h4 {
-    font-size: 18px;
-    line-height: 18px;
-  }
-  .inventory__inner-main .inventoryItem__content .inventoryItem__icons strong {
-    font-size: 20px;
-    line-height: 20px;
-  }
-  .inventory__inner-main .inventoryItem__content-buttons .button.secondary {
+  .inventory__inner-main .inventoryItem__content .button.secondary {
     font-size: 12px;
     line-height: 14px;
     margin-right: 15px;
   }
-  .inventory__inner-main .inventoryItem__content-buttons .button.primary {
+  .inventory__inner-main .inventoryItem__content .button.primary {
     font-size: 12px;
     line-height: 14px;
+    margin-right: unset;
   }
-  .inventory__inner-main .button__wrapper .more {
+  .inventory__inner-main .inventoryItem__content-row {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+  }
+  .inventory__inner-main .inventoryItem__content-row:after {
+    content: "";
+    width: 1px;
+    height: calc(100% - 30px);
+    background-color: #09225A;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .inventory__inner-main .inventoryItem__content-row .inventoryItem__icons:last-child {
+    width: calc(50% - 20px);
+  }
+  .inventory__inner-main .inventoryItem__content-row hr {
+    display: none;
+  }
+  .inventory__inner-main > .button.more {
     font-size: 12px;
     line-height: 14px;
-    max-width: 252px;
-  }
-  .inventory .auto__container {
-    padding: 0;
+    max-width: 259px;
+    width: 84%;
   }
 }
 @media (max-width: 320px) {

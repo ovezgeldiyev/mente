@@ -143,6 +143,8 @@
     @include intro-sm-md;
     @include about-sm-md;
     @include info-sm-md;
+    @include testimonials-sm-md;
+
 
 }
 // 650px
@@ -178,6 +180,8 @@
     @include hero-xxsm-xsm;
     @include intro-xxsm-xsm;
     @include about-xxsm-xsm;
+    @include inventory-xxsm-xsm;
+
 
 }
 // 370px
