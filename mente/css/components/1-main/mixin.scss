@@ -73,6 +73,11 @@
   -ms-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
 }
+@mixin sm {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
 @mixin xxxsm-xxsm {
   @media (max-width: 390px) {
     @content;
