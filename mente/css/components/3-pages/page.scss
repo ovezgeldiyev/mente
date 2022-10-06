@@ -120,6 +120,7 @@
               border: 1px solid $blue;
               padding: 8px 15px;
               margin: 0 21px 0 0;
+              background-color: transparent;
             }
           }
         }
@@ -484,24 +485,33 @@
         line-height: 32px;
         margin-bottom: 0;
         width: 100%;
-        padding: 30px 0;
+        padding: 40px 20px;
       }
       &-main {
         .inventoryItem {
           flex-direction: column;
-          margin-bottom: 50px;
+          margin-bottom: 20px;
+          &:last-child {
+            margin-bottom: 20px;
+          }
+          &__wrapper{
+            .inventoryItem{
+              margin-top: 30px;
+            }
+
+          }
           &__icons {
             margin-bottom: 30px;
             width: calc(33.3% - 30px);
-            text-align: center;
             span {
               max-width: 50px;
               max-height: 40px;
               height: 35px;
-              margin: 0 auto;
+              &.center{
+                margin: unset;
+              }
             }
             &-wrapper {
-              justify-content: center;
               span {
                 margin: unset;
               }
@@ -516,9 +526,7 @@
               line-height: 25px;
             }
           }
-          &:last-child {
-            margin-bottom: 50px;
-          }
+         
           &__wrapper {
             display: none;
             animation-name: fadeInUp;
@@ -554,7 +562,7 @@
             &-row {
               flex-wrap: wrap;
               margin-bottom: unset;
-              justify-content: center;
+              justify-content: flex-start;
               hr {
                 max-height: 62px;
                 margin: 0 15px;
@@ -643,8 +651,8 @@
   }
 }
 
-// 390px
-@mixin inventory-xxxsm-xxsm {
+// 370px
+@mixin inventory-xxxsm-xxsm{
   .inventory {
     &__inner {
       h2 {
@@ -655,7 +663,6 @@
       &-main {
         .inventoryItem {
           flex-direction: column;
-          margin-bottom: 50px;
           &__image {
             margin: 0 0 25px;
             img {
@@ -671,6 +678,9 @@
               max-width: 45px;
               max-height: 35px;
               margin: 0 auto;
+              &.center{
+                margin: 0 auto;
+              }
             }
             &-wrapper {
               justify-content: center;
@@ -685,7 +695,7 @@
             }
             strong {
               font-size: 20px;
-              line-height: 20px;
+              line-height: 26px;
             }
           }
           &__content {
@@ -696,8 +706,8 @@
               margin-bottom: 30px;
             }
             p {
-              font-size: 17px;
-              line-height: 28px;
+              font-size: 16px;
+              line-height: 25px;
               margin-bottom: 30px;
             }
             .button {
@@ -1140,7 +1150,7 @@
               display: none;
             }
             &.tabEvent {
-              max-height: 340px;
+              max-height: 366px;
               overflow: hidden;
               &.active {
                 max-height: 700px;
@@ -1169,10 +1179,15 @@
         }
       }
     }
+    &__bg{
+      img{
+        display: none;
+      }
+    }
   }
 }
 
-// 390px
+// 370px
 @mixin testimonials-xxxsm-xxsm {
   .testimonials {
     &__inner {
@@ -1187,8 +1202,8 @@
         padding: 0 5px 20px;
         .testimonialsItem {
           p {
-            font-size: 17px;
-            line-height: 27px;
+            font-size: 16px;
+            line-height: 25px;
             margin-bottom: 30px;
             &.tabEvent {
               max-height: 328px;
