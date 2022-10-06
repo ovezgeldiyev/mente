@@ -555,6 +555,16 @@ button {
   height: 100%;
   max-width: 580px;
 }
+.intro__bottom-image span {
+  font-size: 60px;
+  line-height: 67px;
+  color: #E314BB;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
 .intro__bottom-image img {
   width: 100%;
   height: 100%;
@@ -1962,6 +1972,8 @@ button {
     padding: 0 20px;
     -webkit-transition: 0.4s ease;
     transition: 0.4s ease;
+    -webkit-box-shadow: 0 11px 18px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 11px 18px rgba(0, 0, 0, 0.3);
   }
   .intro__inner-row.active {
     padding: 28px 20px 35px;
@@ -1987,11 +1999,14 @@ button {
   }
   .intro__bottom-image {
     width: 100%;
-    position: unset;
+    position: relative;
     max-width: unset;
   }
   .intro__bottom-image img {
     min-height: 260px;
+  }
+  .intro__bottom-image span {
+    display: none;
   }
   .intro__bottom-content {
     width: 100%;
