@@ -233,12 +233,14 @@
     @include about-xxxsm-xxsm;
     @include testimonials-xxxsm-xxsm;
     @include inventory-xxxsm-xxsm;
-    @include footer-xxxsm-xxsm;
 
 }
 // 320px
 @include sm{
     @include inventory-sm;
+    @include footer-sm;
+
+    
 
 }
 
