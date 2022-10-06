@@ -1749,11 +1749,22 @@ button {
   }
   .inventory__inner-main .inventoryItem__content .inventoryItem__icons {
     margin-bottom: 30px;
+    width: calc(33.3% - 30px);
+    text-align: center;
   }
   .inventory__inner-main .inventoryItem__content .inventoryItem__icons span {
     max-width: 50px;
     max-height: 40px;
     height: 35px;
+    margin: 0 auto;
+  }
+  .inventory__inner-main .inventoryItem__content .inventoryItem__icons-wraper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .inventory__inner-main .inventoryItem__content .inventoryItem__icons-wraper span {
+    margin: unset;
   }
   .inventory__inner-main .inventoryItem__content .inventoryItem__icons h4 {
     font-size: 20px;
@@ -1767,10 +1778,16 @@ button {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-bottom: unset;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .inventory__inner-main .inventoryItem__content-row hr {
     max-height: 62px;
     margin: 0 15px;
+  }
+  .inventory__inner-main .inventoryItem__content-row hr:nth-last-of-type(2) {
+    display: none;
   }
   .inventory__inner-main .inventoryItem__content-buttons .button.secondary {
     font-size: 18px;
@@ -2143,10 +2160,16 @@ button {
             transform: unset;
   }
 
+  .inventory__inner-main .inventoryItem__icons {
+    text-align: left;
+  }
+  .inventory__inner-main .inventoryItem__icons span {
+    margin: 0 auto 0 0;
+  }
   .inventory__inner-main .inventoryItem__content-row {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 @media (max-width: 440px) {

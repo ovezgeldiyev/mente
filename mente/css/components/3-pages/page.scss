@@ -543,10 +543,20 @@
             }
             .inventoryItem__icons {
               margin-bottom: 30px;
+              width: calc(33.3% - 30px);
+              text-align: center;
+             
               span {
                 max-width: 50px;
                 max-height: 40px;
                 height: 35px;
+                margin: 0 auto;
+              }
+              &-wraper{
+                justify-content: center;
+                span{
+                  margin: unset;
+                }
               }
 
               h4 {
@@ -561,9 +571,14 @@
             &-row {
               flex-wrap: wrap;
               margin-bottom: unset;
+              justify-content: center;
               hr {
                 max-height: 62px;
                 margin: 0 15px;
+                  &:nth-last-of-type(2){
+                    display: none;
+                  }
+                  
               }
             }
             &-buttons {
@@ -605,9 +620,16 @@
     &__inner {
       &-main {
         .inventoryItem {
+          &__icons{
+            text-align: left;
+            span{
+              margin: 0 auto 0 0;
+            }
+          }
           &__content {
             &-row {
-              justify-content: center;
+              justify-content: flex-start;
+              
             }
           }
         }
