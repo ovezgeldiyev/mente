@@ -201,7 +201,9 @@
         font-size: 15px;
         &__row {
             .button {
-                margin-right: 5px;
+                &:first-child {
+                    margin-right: 5px;
+                }
             }
         }
         &.primary {

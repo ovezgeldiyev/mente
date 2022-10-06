@@ -225,9 +225,16 @@
 // 650px
 @mixin hero-sm-md-extra {
     .hero {
-        background-color: $primary;
-        background-color: rgba($primary, .94);
-        backdrop-filter: blur(20px);
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($primary, .95);
+            backdrop-filter: blur(20px);
+        }
         &__bg {
             position: unset;
             padding-bottom: 75%;
@@ -1055,10 +1062,10 @@
                 padding: 40px 20px 60px;
                 span {
                     margin-bottom: 18px;
-                    width: 96px;
-                    height: 96px;
-                    font-size: 60px;
-                    line-height: 62px;
+                    width: 90px;
+                    height: 90px;
+                    font-size: 56px;
+                    line-height: 60px;
                 }
                 h2 {
                     margin-bottom: 10px;
@@ -1376,8 +1383,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            &:nth-child(4) {
-            }
+
             h4 {
               color: $blue;
               margin-bottom: 7px;
@@ -1440,25 +1446,14 @@
             }
             .button {
               &.primary {
-                font-size: 18px;
-                line-height: 26px;
-                text-transform: uppercase;
-                color: $white;
-                font-weight: 700;
-                background-color: $blue;
-                padding: 8px 31px;
+                background-color: transparent;
                 border: 1px solid $blue;
+                color: $blue;
               }
               &.secondary {
-                font-size: 18px;
-                line-height: 26px;
-                text-transform: uppercase;
-                color: $blue;
-                font-weight: 700;
-                border: 1px solid $blue;
-                padding: 8px 15px;
-                margin: 0 21px 0 0;
-                background-color: transparent;
+                color: $white;
+                border: 1px solid transparent;
+                background-color: $blue;
               }
             }
           }
@@ -1534,14 +1529,7 @@
                 width: 100%;
               }
               .button {
-                &.secondary {
-                  font-size: 16px;
-                  line-height: 22px;
-                }
-                &.primary {
-                  font-size: 16px;
-                  line-height: 22px;
-                }
+                font-size: 16px;
               }
             }
           }
@@ -1628,13 +1616,14 @@
               }
   
               .button {
-                &.secondary {
-                  font-size: 15px;
-                  line-height: 20px;
-                }
-                &.primary {
-                  font-size: 15px;
-                  line-height: 20px;
+                font-size: 15px;
+                line-height: 20px;
+                &__row {
+                    .button {
+                        &:first-child {
+                            margin-right: 16px;
+                        }
+                    }
                 }
               }
             }
@@ -1690,14 +1679,8 @@
                 margin-bottom: 20px;
               }
               .button {
-                &.secondary {
-                  font-size: 14px;
-                  line-height: 18px;
-                }
-                &.primary {
-                  font-size: 14px;
-                  line-height: 18px;
-                }
+                font-size: 14px;
+                line-height: 18px;
               }
             }
           }
@@ -1743,19 +1726,6 @@
                 font-size: 13px;
                 line-height: 20px;
                 margin-bottom: 15px;
-              }
-  
-              .button {
-                &.secondary {
-                  padding: 8px 10px;
-                  font-size: 13px;
-                  line-height: 16px;
-                }
-                &.primary {
-                  padding: 8px 22px;
-                  font-size: 13px;
-                  line-height: 16px;
-                }
               }
             }
           }
@@ -1820,7 +1790,7 @@
         padding: 0 0 70px;
         h2 {
           font-size: 37px;
-          line-height: 32px;
+          line-height: 39px;
           margin-bottom: 0;
           width: 100%;
           padding: 40px 20px;
@@ -1910,17 +1880,8 @@
                 }
               }
               .button {
-                &.secondary {
-                  font-size: 18px;
-                  line-height: 26px;
-                  margin-right: 15px;
-                  padding: 8px 15px;
-                }
-                &.primary {
-                  font-size: 18px;
-                  line-height: 26px;
-                  padding: 8px 31px;
-                }
+                font-size: 18px;
+                line-height: 26px;
               }
             }
           }
@@ -1956,6 +1917,15 @@
               &-row {
                 justify-content: flex-start;
               }
+              .button {
+                &__row {
+                    .button {
+                        &:first-child {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+              }
             }
           }
         }
@@ -1967,10 +1937,25 @@
     .inventory {
       &__inner {
         &-main {
-          .inventoryItem {
-            &__icons {
+            & > .button {
+                width: calc(100% - 40px);
+                max-width: unset;
             }
+            .inventoryItem {
             &__content {
+                .button {
+                    width: calc(50% - 5px);
+                    &.primary {
+                        padding: 10px 12px;
+                    }
+                    &.secondary {
+                        padding: 10px 25px;
+                    }
+                    &__row {
+                        justify-content: space-between;
+
+                    }
+                }
               &-row {
                 align-items: flex-start;
                 .inventoryItem__icons {
@@ -2050,16 +2035,8 @@
               }
               .button {
                 text-align: center;
-                &.secondary {
-                  font-size: 12px;
-                  line-height: 14px;
-                  margin-right: 15px;
-                }
-                &.primary {
-                  font-size: 12px;
-                  line-height: 14px;
-                  margin-right: unset;
-                }
+                font-size: 15px;
+                line-height: 19px;
               }
               &-row {
                 justify-content: space-between;
@@ -2083,14 +2060,6 @@
                   display: none;
                 }
               }
-            }
-          }
-          & > .button {
-            &.more {
-              font-size: 12px;
-              line-height: 14px;
-              max-width: 259px;
-              width: 84%;
             }
           }
         }

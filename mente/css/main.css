@@ -972,25 +972,14 @@ button {
   margin-bottom: 34px;
 }
 .inventory__inner-main .inventoryItem__content .button.primary {
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
-  color: #fff;
-  font-weight: 700;
-  background-color: #09225A;
-  padding: 8px 31px;
+  background-color: transparent;
   border: 1px solid #09225A;
+  color: #09225A;
 }
 .inventory__inner-main .inventoryItem__content .button.secondary {
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
-  color: #09225A;
-  font-weight: 700;
-  border: 1px solid #09225A;
-  padding: 8px 15px;
-  margin: 0 21px 0 0;
-  background-color: transparent;
+  color: #fff;
+  border: 1px solid transparent;
+  background-color: #09225A;
 }
 .inventory__inner-main > .button {
   display: none;
@@ -1303,13 +1292,8 @@ button {
     margin-bottom: 30px;
     width: 100%;
   }
-  .inventory__inner-main .inventoryItem__content .button.secondary {
+  .inventory__inner-main .inventoryItem__content .button {
     font-size: 16px;
-    line-height: 22px;
-  }
-  .inventory__inner-main .inventoryItem__content .button.primary {
-    font-size: 16px;
-    line-height: 22px;
   }
 
   .intro__inner-row p {
@@ -1397,13 +1381,12 @@ button {
     font-size: 30px;
     line-height: 40px;
   }
-  .inventory__inner-main .inventoryItem__content .button.secondary {
+  .inventory__inner-main .inventoryItem__content .button {
     font-size: 15px;
     line-height: 20px;
   }
-  .inventory__inner-main .inventoryItem__content .button.primary {
-    font-size: 15px;
-    line-height: 20px;
+  .inventory__inner-main .inventoryItem__content .button__row .button:first-child {
+    margin-right: 16px;
   }
 
   .intro {
@@ -1561,11 +1544,7 @@ button {
   .inventory__inner-main .inventoryItem__content-row {
     margin-bottom: 20px;
   }
-  .inventory__inner-main .inventoryItem__content .button.secondary {
-    font-size: 14px;
-    line-height: 18px;
-  }
-  .inventory__inner-main .inventoryItem__content .button.primary {
+  .inventory__inner-main .inventoryItem__content .button {
     font-size: 14px;
     line-height: 18px;
   }
@@ -1686,16 +1665,6 @@ button {
     font-size: 13px;
     line-height: 20px;
     margin-bottom: 15px;
-  }
-  .inventory__inner-main .inventoryItem__content .button.secondary {
-    padding: 8px 10px;
-    font-size: 13px;
-    line-height: 16px;
-  }
-  .inventory__inner-main .inventoryItem__content .button.primary {
-    padding: 8px 22px;
-    font-size: 13px;
-    line-height: 16px;
   }
 
   .benefits__inner-content {
@@ -1913,7 +1882,7 @@ button {
   }
   .inventory__inner h2 {
     font-size: 37px;
-    line-height: 32px;
+    line-height: 39px;
     margin-bottom: 0;
     width: 100%;
     padding: 40px 20px;
@@ -2003,16 +1972,9 @@ button {
   .inventory__inner-main .inventoryItem__content-row hr:nth-last-of-type(2) {
     display: none;
   }
-  .inventory__inner-main .inventoryItem__content .button.secondary {
+  .inventory__inner-main .inventoryItem__content .button {
     font-size: 18px;
     line-height: 26px;
-    margin-right: 15px;
-    padding: 8px 15px;
-  }
-  .inventory__inner-main .inventoryItem__content .button.primary {
-    font-size: 18px;
-    line-height: 26px;
-    padding: 8px 31px;
   }
   .inventory__inner-main > .button {
     display: block;
@@ -2105,10 +2067,10 @@ button {
   }
   .benefitsItem__content span {
     margin-bottom: 18px;
-    width: 96px;
-    height: 96px;
-    font-size: 60px;
-    line-height: 62px;
+    width: 90px;
+    height: 90px;
+    font-size: 56px;
+    line-height: 60px;
   }
   .benefitsItem__content h2 {
     margin-bottom: 10px;
@@ -2156,9 +2118,14 @@ button {
   }
 }
 @media (max-width: 650px) {
-  .hero {
-    background-color: #07205C;
-    background-color: rgba(7, 32, 92, 0.94);
+  .hero::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(7, 32, 92, 0.95);
     -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
   }
@@ -2485,6 +2452,9 @@ button {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+  .inventory__inner-main .inventoryItem__content .button__row .button:first-child {
+    margin-right: 10px;
+  }
 }
 @media (max-width: 440px) {
   h1 {
@@ -2560,6 +2530,24 @@ button {
     min-height: 52px;
   }
 
+  .inventory__inner-main > .button {
+    width: calc(100% - 40px);
+    max-width: unset;
+  }
+  .inventory__inner-main .inventoryItem__content .button {
+    width: calc(50% - 5px);
+  }
+  .inventory__inner-main .inventoryItem__content .button.primary {
+    padding: 10px 12px;
+  }
+  .inventory__inner-main .inventoryItem__content .button.secondary {
+    padding: 10px 25px;
+  }
+  .inventory__inner-main .inventoryItem__content .button__row {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .inventory__inner-main .inventoryItem__content-row {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -2576,7 +2564,7 @@ button {
   .button {
     font-size: 15px;
   }
-  .button__row .button {
+  .button__row .button:first-child {
     margin-right: 5px;
   }
   .button.primary {
@@ -2685,16 +2673,8 @@ button {
   }
   .inventory__inner-main .inventoryItem__content .button {
     text-align: center;
-  }
-  .inventory__inner-main .inventoryItem__content .button.secondary {
-    font-size: 12px;
-    line-height: 14px;
-    margin-right: 15px;
-  }
-  .inventory__inner-main .inventoryItem__content .button.primary {
-    font-size: 12px;
-    line-height: 14px;
-    margin-right: unset;
+    font-size: 15px;
+    line-height: 19px;
   }
   .inventory__inner-main .inventoryItem__content-row {
     -webkit-box-pack: justify;
@@ -2718,12 +2698,6 @@ button {
   }
   .inventory__inner-main .inventoryItem__content-row hr {
     display: none;
-  }
-  .inventory__inner-main > .button.more {
-    font-size: 12px;
-    line-height: 14px;
-    max-width: 259px;
-    width: 84%;
   }
 }
 @media (max-width: 320px) {
