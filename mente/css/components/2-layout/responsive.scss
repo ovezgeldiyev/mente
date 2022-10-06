@@ -1,3 +1,9 @@
+// 1550px
+@include xxxxxlg-xxxxxxlg {
+    @include intro-xxxxxlg-xxxxxxlg;
+    @include hero-xxxxxlg-xxxxxxlg;
+
+}
 // 1450px
 @include xxxxlg-xxxxxlg {
     // @include hero-xxxxlg-xxxxxlg;
@@ -25,6 +31,8 @@
         }
     }
     @include hero-xxxlg-xxxxlg;
+    @include intro-xxxlg-xxxxlg;
+
 }
 // 1250px
 @include xlg-xxlg-extra {
@@ -33,6 +41,9 @@
 // 1180px
 @include xlg-xxlg {
     @include hero-xlg-xxlg;
+    @include intro-xlg-xxlg;
+    @include about-xlg-xxlg;
+
 }
 // 1024px
 @include lg-xlg {
@@ -67,10 +78,18 @@
         line-height: 30px;
     }
     @include hero-lg-xlg;
+    @include intro-lg-xlg;
+    @include about-lg-xlg;
+    @include info-lg-xlg;
+
 }
 // 930px
 @include md-lg {
     @include hero-md-lg;
+    @include intro-md-lg;
+    @include about-md-lg;
+    @include info-md-lg;
+
 }
 // 750px
 @include sm-md {
@@ -102,10 +121,18 @@
         line-height: 32px;
     }
     @include hero-sm-md;
+    @include intro-sm-md;
+    @include about-sm-md;
+    @include info-sm-md;
+
 }
 // 650px
 @include sm-md-extra {
     @include hero-sm-md-extra;
+    @include intro-sm-md-extra;
+    @include about-sm-md-extra;
+    @include info-sm-md-extra;
+
 }
 // 540px
 @include xsm-sm  {
@@ -126,9 +153,26 @@
         }
     }
     @include hero-xxsm-xsm;
+    @include intro-xxsm-xsm;
+    @include about-xxsm-xsm;
+
 }
-// 390px
+// 370px
 @include xxxsm-xxsm  {
-    // @include hero-xxxsm-xxsm;
+    .button {
+        font-size: 15px;
+        &__row {
+            .button {
+                margin-right: 5px;
+            }
+        }
+        &.primary {
+            padding: 6px 12px;
+        }
+        &.secondary {
+            padding: 6px 25px;
+        }
+    }
+    @include about-xxxsm-xxsm;
 }
 
