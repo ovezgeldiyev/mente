@@ -33,7 +33,12 @@
       .button {
         border: 1px solid $white;
         background-color: transparent;
- 
+        transition: .4s ease;
+        &:hover {
+          border-color: #e00538;
+          opacity: .9;
+          background-color: $black;
+        }
       }
     }
     &-bottom {

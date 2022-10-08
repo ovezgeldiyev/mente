@@ -273,6 +273,13 @@ button {
 .header__inner-top .button {
   border: 1px solid #fff;
   background-color: transparent;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+.header__inner-top .button:hover {
+  border-color: #e00538;
+  opacity: 0.9;
+  background-color: #000;
 }
 .header__inner-bottom {
   display: -webkit-box;

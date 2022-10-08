@@ -90,21 +90,6 @@
         left: 50%;
         @include transformX;
     }
-    // &.active {
-    //     &::before {
-    //         top: 50%;
-    //         -webkit-transform: translate(-50%, -50%) rotate(45deg);
-    //         transform: translate(-50%, -50%) rotate(45deg);
-    //     }
-    //     span {
-    //         opacity: 0;
-    //     }
-    //     &::after {
-    //         bottom: 50%;
-    //         -webkit-transform: translate(-50%, 50%) rotate(-45deg);
-    //         transform: translate(-50%, 50%) rotate(-45deg);
-    //     }
-    // }
 }
 // 1180px
 @mixin nav-xlg-xxlg {
