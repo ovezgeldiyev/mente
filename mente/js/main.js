@@ -2,7 +2,6 @@
 var menu = document.getElementById("menu");
 var menuBtn = document.getElementById("menuBtn");
 var closeBtn = document.getElementById("close");
-
 var body = document.body;
 menuBtn.onclick = function () {
   menu.classList.toggle("active");
@@ -14,7 +13,6 @@ closeBtn.onclick = function () {
   menuBtn.classList.remove("active");
   body.classList.remove("active");
 };
-
 // menu end
 // scroll start
 let header = document.getElementById("header");
@@ -28,106 +26,7 @@ function scrollFunc() {
 window.onscroll = function () {
   scrollFunc();
 };
-// // scroll end
-// // sliders
-// $(function () {
-//   $(".about__inner-swiper").slick({
-//     infinite: true,
-//     slidesToShow: 4,
-//     slidesToScroll: 1,
-//     vertical: true,
-//     verticalSwiping: true,
-//     focusOnSelect: true,
-//     arrows: false,
-//     speed: 500,
-//     asNavFor: '.about__inner-slider',
-//     responsive: [
-//       {
-//         breakpoint: 930,
-//         settings: {
-         
-//         },
-//       },
-//     ],
-//   });
-// });
-
-// $(function () {
-//   $(".about__inner-slider").slick({
-//     dots: false,
-//     infinite: true,
-//     centerMode: false,
-//     arrows: false,
-//     fade: true,
-//     speed: 500,
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     asNavFor: '.about__inner-swiper',
-//   });
-// });
-
-// var $status = $(".pagingInfo");
-// $(".infoClubs__slider").each(function (index, element) {
-//   let $slickElement = $(element);
-//   $slickElement.slick({
-//     infinite: true,
-//     slidesToShow: 4,
-//     slidesToScroll: 1,
-//     autoplay: false,
-//     arrows: true,
-//     prevArrow: $slickElement.next().find(".prev"),
-//     nextArrow: $slickElement.next().find(".next"),
-//     dots: false,
-//     fade: false,
-//   });
-// });
-
-// /*mobile slider */
-// function mobileOnlySlider() {
-//   $(".slider").slick({
-//     infinite: true,
-//     speed: 300,
-//     slidesToShow: 1,
-//     adaptiveHeight: false,
-//     arrows: false,
-//     dots: false,
-//   });
-// }
-// if (window.innerWidth < 440) {
-//   mobileOnlySlider();
-// }
-// function resizeListener(e) {
-//   if (window.innerWidth < 440) {
-//     $(".slider").addClass("sliderMob");
-//     if (!$(".slider").hasClass("slick-initialized")) {
-//       mobileOnlySlider();
-//     }
-//   } else {
-//     $(".slider").removeClass("sliderMob");
-//     if ($(".slider").hasClass("slick-initialized")) {
-//       $(".slider").slick("unslick");
-//     }
-//   }
-// }
-// resizeListener();
-// $(window).resize(resizeListener);
-// faq sta
-
-
-
-$(function () {
-  $(".hero__slider").slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: false,
-    speed: 1200,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    fade: true,
-  });
-});
+// scroll end
 // faq start
 const tabBtn = document.querySelectorAll(".tabBtn");
 const tabEvent = document.querySelectorAll(".tabEvent");
@@ -159,8 +58,21 @@ function onTabClick(tabBtns, tabItems, item) {
     }
   });
 }
-// // faq end
-
+// faq end
+// sliders
+$(function () {
+  $(".hero__slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    speed: 1200,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    fade: true,
+  });
+});
 
  $(function () {
   $(".testimonials__inner-slider").slick({
@@ -174,4 +86,3 @@ function onTabClick(tabBtns, tabItems, item) {
     slidesToScroll: 1,
   });
 });
-// faq end

@@ -17,6 +17,7 @@ h2 {
     line-height: 56px;
   }
 }
+
 h3 {
   font-size: 30px;
   line-height: 40px;
@@ -43,57 +44,62 @@ h6 {
   font-size: 18px;
   line-height: 40px;
 }
-p {
-}
+
 main {
   overflow: hidden;
-  margin-top: 191px;
+  margin-top: 188.55px;
   background-color: $white;
 }
-.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: 700;
-    text-transform: uppercase;
-    cursor: pointer;
-    &__row {
-        display: flex;
-        align-items: center;
-        .button {
-            &:first-child {
-                margin-right: 24px;
-            }
-        }
-    }
-    &.primary {
-        border: 1px solid $white;
-        color: $white;
-        padding: 10px 15px;
-        background-color: $primary;
-    }
-    &.secondary {
-        padding: 10px 35px;
-        background-color: $white;
-        color: $gray2;
-        border: 1px solid transparent;
-    }
-    &.more {
-        color: $blue;
-        font-weight: 700;
-        border: 1px solid $blue;
-        padding: 8px 15px;
-        background-color: transparent;
 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &__row {
+    display: flex;
+    align-items: center;
+
+    .button {
+      &:first-child {
+        margin-right: 24px;
+      }
     }
+  }
+
+  &.primary {
+    border: 1px solid $white;
+    color: $white;
+    padding: 10px 15px;
+    background-color: $primary;
+  }
+
+  &.secondary {
+    padding: 10px 35px;
+    background-color: $white;
+    color: $gray2;
+    border: 1px solid transparent;
+  }
+
+  &.more {
+    color: $blue;
+    font-weight: 700;
+    border: 1px solid $blue;
+    padding: 8px 15px;
+    background-color: transparent;
+
+  }
 }
 
-
-button{
+button {
   font-family: $montserrat;
 }
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -107,6 +113,7 @@ button{
     transform: translate3d(0, 0, 0);
   }
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;

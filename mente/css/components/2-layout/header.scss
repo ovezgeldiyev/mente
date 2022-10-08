@@ -4,36 +4,41 @@
   left: 0;
   width: 100%;
   z-index: 10;
-  &.sticky  {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   animation-name: sticky;
-   animation-duration: .4s;
-   background: rgba(0,0,0,0.5);
-   backdrop-filter: blur(30px);
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation-name: sticky;
+    animation-duration: .4s;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(30px);
   }
+
   &__inner {
     .auto__container {
       width: 100%;
     }
+
     hr {
       height: 1px;
       width: 100%;
-      background-color: rgba(255,255,255,0.1);
+      background-color: rgba(255, 255, 255, 0.1);
     }
+
     &-top {
       padding: 35px 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: relative;
- 
+
       .button {
         border: 1px solid $white;
         background-color: transparent;
         transition: .4s ease;
+
         &:hover {
           border-color: #e00538;
           opacity: .9;
@@ -41,11 +46,13 @@
         }
       }
     }
+
     &-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 6px 0;
+
       button {
         background-color: transparent;
         cursor: pointer;
@@ -59,69 +66,112 @@
         &:hover {
           opacity: .8;
         }
+
         img {
           width: 100%;
         }
       }
     }
+
     &-logo {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 210px;
+
       img {
         width: 100%;
       }
     }
   }
 }
+
 // 1024px
 @mixin header-lg-xlg {
-    .header {
-      &.sticky  {
-        background: rgba(0,0,0,0.5);
-        backdrop-filter: unset;
-       }
-      &__inner {
-        &-logo {
-          width: 150px;
-        }
-        &-top {
-          padding: 20px 0;
-          .button {
-            font-size: 15px;
-            line-height: 18px;
-   
-          }
+  .header {
+    &.sticky {
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: unset;
+    }
+
+    &__inner {
+      &-logo {
+        width: 150px;
+      }
+
+      &-top {
+        padding: 20px 0;
+
+        .button {
+          font-size: 15px;
+          line-height: 18px;
         }
       }
-    }
-}
-// 540px
-@mixin header-xsm-sm {
-    .header {
-      &__inner {
-        &-logo {
-          width: 120px;
-        }
-        &-top {
-          padding: 15px 0;
-          .button {
-            font-size: 12px;
-            line-height: 15px;
-            padding: 6px 12px;
-          }
-        }
+
+      &-bottom {
+        padding: 8px 0;
       }
-    }
-}
-@keyframes sticky {
-    0% {
-      top: -60px;
-      opacity: 0;
-    }
-    100% {
-      top: 0;
-      opacity: 1;
     }
   }
+}
+
+// 540px
+@mixin header-xsm-sm {
+  .header {
+    &__inner {
+      &-logo {
+        width: 120px;
+      }
+
+      &-top {
+        padding: 15px 0;
+
+        .button {
+          font-size: 12px;
+          line-height: 15px;
+          padding: 6px 12px;
+        }
+      }
+    }
+  }
+}
+
+// 370px
+@mixin header-xxxsm-xxsm {
+  .header {
+    &__inner {
+      &-logo {
+        width: 100px;
+      }
+
+      &-top {
+        .button {
+          font-size: 10px;
+          line-height: 13px;
+          padding: 6px 10px;
+        }
+      }
+
+      &-bottom {
+        padding: 5px 0;
+
+        button {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes sticky {
+  0% {
+    top: -60px;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
